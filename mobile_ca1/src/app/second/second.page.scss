@@ -1,0 +1,21 @@
+ion-content {
+    background-image:url(../home/photo/photo6.png);
+    background-size:auto;
+  
+  }
+
+
+ion-item {
+  --padding-start: 0;
+  --padding-end: 0;
+  --inner-padding-end: 0;
+  --inner-padding-start: 0;
+}
+
+ion-label {
+  --color: black;
+}
+
+ion-button {
+  --background: red;
+}

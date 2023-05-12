@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>FORMS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label>Name:</ion-label>
+      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email:</ion-label>
+      <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Which is your favourite videogame?</ion-label>
+      <ion-input type="text" [(ngModel)]="favoriteConsole" name="favoriteConsole"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Which is your favourite game?</ion-label>
+      <ion-input type="text" [(ngModel)]="favoriteGame" name="favoriteGame"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Which was your first videogame?</ion-label>
+      <ion-input type="text" [(ngModel)]="favoriteGame" name="favoriteGame"></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit">Send</ion-button>
+  </form>
+  <ion-toast
+    [isOpen]="isSubmitted"
+    message="Form sent successfully!"
+    duration="2000"
+    color="green"
+  ></ion-toast>
+</ion-content>
