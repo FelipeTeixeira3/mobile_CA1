@@ -3,14 +3,8 @@
     <ion-title>FORMS</ion-title>
   </ion-toolbar>
 </ion-header>
-
-
-
 <ion-content>
-
-  
-
-  <form (ngSubmit)="onSubmit()">
+  <form (ngSubmit)="onSubmit()"
     <ion-item>
       <ion-label>Name:</ion-label>
       <ion-input type="text" [(ngModel)]="name" name="name" required placeholder="Enter your name"></ion-input>
@@ -23,22 +17,19 @@
 
     <ion-item>
       <ion-label>Question 1:</ion-label>
-      <ion-input type="text" [(ngModel)]="favoriteConsole" name="favoriteConsole" required placeholder="Enter your favourite console"></ion-input>
+      <ion-input type="text" [(ngModel)]="favoriteConsole" name="favoriteConsole" required
+        placeholder="Enter your favourite console"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label>Question 2:</ion-label>
-      <ion-input type="text" [(ngModel)]="favoriteGame" name="favoriteGame" required placeholder="Enter your favourite game"></ion-input>
+      <ion-input type="text" [(ngModel)]="favoriteGame" name="favoriteGame" required
+        placeholder="Enter your favourite game"></ion-input>
     </ion-item>
 
     <ion-button class="Send" type="submit">Send</ion-button>
     <ion-button class="back-button" routerLink="/home">BACK</ion-button>
-    <ion-toast
-      [isOpen]="isSubmitted"
-      message="Form sent successfully!"
-      duration="1000"
-      color="green">
+    <ion-toast [isOpen]="isSubmitted" message="Form sent successfully!" duration="1000" color="green">
     </ion-toast>
- 
   </form>
 </ion-content>
