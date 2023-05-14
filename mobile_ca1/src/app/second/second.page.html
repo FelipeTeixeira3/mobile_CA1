@@ -4,34 +4,41 @@
   </ion-toolbar>
 </ion-header>
 
+
+
 <ion-content>
+
+  
+
   <form (ngSubmit)="onSubmit()">
     <ion-item>
       <ion-label>Name:</ion-label>
-      <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+      <ion-input type="text" [(ngModel)]="name" name="name" required placeholder="Enter your name"></ion-input>
     </ion-item>
+
     <ion-item>
       <ion-label>Email:</ion-label>
-      <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
+      <ion-input type="email" [(ngModel)]="email" name="email" required placeholder="Enter your email"></ion-input>
     </ion-item>
+
     <ion-item>
-      <ion-label>Which is your favourite videogame?</ion-label>
-      <ion-input type="text" [(ngModel)]="favoriteConsole" name="favoriteConsole"></ion-input>
+      <ion-label>Question 1:</ion-label>
+      <ion-input type="text" [(ngModel)]="favoriteConsole" name="favoriteConsole" required placeholder="Enter your favourite console"></ion-input>
     </ion-item>
+
     <ion-item>
-      <ion-label>Which is your favourite game?</ion-label>
-      <ion-input type="text" [(ngModel)]="favoriteGame" name="favoriteGame"></ion-input>
+      <ion-label>Question 2:</ion-label>
+      <ion-input type="text" [(ngModel)]="favoriteGame" name="favoriteGame" required placeholder="Enter your favourite game"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label>Which was your first videogame?</ion-label>
-      <ion-input type="text" [(ngModel)]="favoriteGame" name="favoriteGame"></ion-input>
-    </ion-item>
-    <ion-button expand="full" type="submit">Send</ion-button>
+
+    <ion-button class="Send" type="submit">Send</ion-button>
+    <ion-button class="back-button" routerLink="/home">BACK</ion-button>
+    <ion-toast
+      [isOpen]="isSubmitted"
+      message="Form sent successfully!"
+      duration="1000"
+      color="green">
+    </ion-toast>
+ 
   </form>
-  <ion-toast
-    [isOpen]="isSubmitted"
-    message="Form sent successfully!"
-    duration="2000"
-    color="red"
-  ></ion-toast>
 </ion-content>

@@ -13,7 +13,19 @@
   text-align: center;
   text-shadow: 1px 1px 6px #000000;
   font-size: 4em;
-  color: #e4e4e4; 
+  color: #dadada; 
+  top: 30%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 100%; 
+}
+
+.centered-text2 {
+  position: absolute; 
+  text-align: center;
+  text-shadow: 1px 1px 6px #000000;
+  font-size: 2em;
+  color: #dadada; 
   top: 50%; 
   left: 50%; 
   transform: translate(-50%, -50%); 
@@ -23,11 +35,11 @@
 .start-button {
   position: absolute; 
   --background: red;
-  bottom: 20%; 
+  bottom: 40%; 
   left: 50%; 
   transform: translateX(-50%); 
   width: 20%; 
 }
 .colour {
-  --ion-color-base: #f17a7a;
+  --ion-color-base: #e40909;
 }
